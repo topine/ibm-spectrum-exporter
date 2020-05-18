@@ -1,0 +1,60 @@
+metrics:
+  storage_systems:
+    - ibm_spectrum_metric_id: 803
+      prometheus_name: storage_avg_read_io_ops_per_second
+      prometheus_help: Average number of read operations per second (both sequential and non-sequential, if applicable), for a particular component over a particular time interval.
+
+    - ibm_spectrum_metric_id: 806
+      prometheus_name: storage_avg_write_io_ops_per_second
+      prometheus_help: Average number of write operations per second (both sequential and non-sequential, if applicable), for a particular component over a particular time interval.
+
+    - ibm_spectrum_metric_id: 809
+      prometheus_name: storage_avg_total_io_ops_per_second
+      prometheus_help: Average number of all read and write operations per second (both sequential and non-sequential, if applicable), for a particular component over a particular time interval.
+
+    - ibm_spectrum_metric_id: 819
+      prometheus_name: storage_avg_read_mb_per_second
+      prometheus_help: Average number of mebibytes (2^20 bytes) per second transferred for read operations.
+
+    - ibm_spectrum_metric_id: 820
+      prometheus_name: storage_avg_write_mb_per_second
+      prometheus_help: Average number of mebibytes (2^20 bytes) per second transferred for write operations.
+
+    - ibm_spectrum_metric_id: 821
+      prometheus_name: storage_avg_total_mb_per_second
+      prometheus_help: Average number of mebibytes (2^20 bytes) per second transferred for read and write operations.
+
+    - ibm_spectrum_metric_id: 822
+      prometheus_name: storage_avg_read_ms_per_operation
+      prometheus_help: Average number of milliseconds that it took to service each read operation, for a particular component over a particular time interval.
+
+    - ibm_spectrum_metric_id: 823
+      prometheus_name: storage_avg_write_ms_per_operation
+      prometheus_help: Average number of milliseconds that it took to service each write operation, for a particular component over a particular time interval.
+
+    - ibm_spectrum_metric_id: 824
+      prometheus_name: storage_avg_total_ms_per_operation
+      prometheus_help: Average number of milliseconds that it took to service each IO operation (reads and writes), for a particular component over a particular time interval.
+
+  switches:
+    - ibm_spectrum_metric_id: 860
+      prometheus_name: storage_switcher_avg_total_mb_per
+      prometheus_help: Average number of mebibytes (2^20 bytes) transferred per second.
+
+  pools:
+    properties:
+      - property_name: Capacity
+        prometheus_name: storage_usable_capacity_GiB
+        prometheus_help: Usable Capacity
+
+      - property_name: Total Volume Capacity
+        prometheus_name: storage_allocagted_capacity_GiB
+        prometheus_help: Allocated Capacity
+
+      - property_name: Allocated Space
+        prometheus_name: storage_used_capacity_GiB
+        prometheus_help: Used Capacity
+
+      - property_name: Available Pool Space
+        prometheus_name: storage_free_capacity_GiB
+        prometheus_help: Free Capacity
