@@ -1,0 +1,228 @@
+[
+  {
+    "metricDetails": {
+      "1000": {
+        "description": "The percentage of all data (KB) that was read from the cache or was written to already dirty cache slots, for a particular component over a particular time interval.",
+        "name": "Overall Data Cache Hit Percentage",
+        "units": "%"
+      },
+      "1001": {
+        "description": "The average number of milliseconds that it took to service each read cache hit operation, for a particular component over a particular time interval.",
+        "name": "Read Cache Hit Response Time",
+        "units": "ms\/op"
+      },
+      "1002": {
+        "description": "The average number of milliseconds that it took to service each write cache hit operation, for a particular component over a particular time interval.",
+        "name": "Write Cache Hit Response Time",
+        "units": "ms\/op"
+      },
+      "1003": {
+        "description": "The average number of milliseconds that it took to service each cache hit operation (reads and writes), for a particular component over a particular time interval.",
+        "name": "Overall Cache Hit Response Time",
+        "units": "ms\/op"
+      },
+      "1004": {
+        "description": "The average number of milliseconds that it took to service each read cache miss operation, for a particular component over a particular time interval.",
+        "name": "Read Cache Miss Response Time",
+        "units": "ms\/op"
+      },
+      "1005": {
+        "description": "The average number of milliseconds that it took to service each write cache miss operation, for a particular component over a particular time interval.",
+        "name": "Write Cache Miss Response Time",
+        "units": "ms\/op"
+      },
+      "1006": {
+        "description": "The average number of milliseconds that it took to service each cache miss operation (reads and writes), for a particular component over a particular time interval.",
+        "name": "Overall Cache Miss Response Time",
+        "units": "ms\/op"
+      },
+      "1007": {
+        "description": "The percentage of all I\/Os that were operations with small transfer sizes (0-8KB), for a particular component over a particular time interval.",
+        "name": "Small Transfers I\/O Percentage",
+        "units": "%"
+      },
+      "1008": {
+        "description": "The percentage of all I\/Os that were operations with medium transfer sizes (8-64KB), for a particular component over a particular time interval.",
+        "name": "Medium Transfers I\/O Percentage",
+        "units": "%"
+      },
+      "1009": {
+        "description": "The percentage of all I\/Os that were operations with large transfer sizes (64-512KB), for a particular component over a particular time interval.",
+        "name": "Large Transfers I\/O Percentage",
+        "units": "%"
+      },
+      "1010": {
+        "description": "The percentage of all I\/Os that were operations with very large transfer sizes (>512KB), for a particular component over a particular time interval.",
+        "name": "Very Large Transfers I\/O Percentage",
+        "units": "%"
+      },
+      "1011": {
+        "description": "The percentage of all data (KB) that was transferred via I\/O operations with small transfer sizes (0-8KB), for a particular component over a particular time interval.",
+        "name": "Small Transfers Data Percentage",
+        "units": "%"
+      },
+      "1012": {
+        "description": "The percentage of all data (KB) that was transferred via I\/O operations with medium transfer sizes (8-64KB), for a particular component over a particular time interval.",
+        "name": "Medium Transfers Data Percentage",
+        "units": "%"
+      },
+      "1013": {
+        "description": "The percentage of all data (KB) that was transferred via I\/O operations with large transfer sizes (64-512KB), for a particular component over a particular time interval.",
+        "name": "Large Transfers Data Percentage",
+        "units": "%"
+      },
+      "1014": {
+        "description": "The percentage of all data (KB) that was transferred via I\/O operations with very large transfer sizes (>512KB), for a particular component over a particular time interval.",
+        "name": "Very Large Transfers Data Percentage",
+        "units": "%"
+      },
+      "1015": {
+        "description": "The average number of milliseconds that it took to service each I\/O operation with a small transfer sizes (0-8KB), for a particular component over a particular time interval.",
+        "name": "Small Transfers Response Time",
+        "units": "ms\/op"
+      },
+      "1016": {
+        "description": "The average number of milliseconds that it took to service each I\/O operation with a medium transfer sizes (8-64KB), for a particular component over a particular time interval.",
+        "name": "Medium Transfers Response Time",
+        "units": "ms\/op"
+      },
+      "1017": {
+        "description": "The average number of milliseconds that it took to service each I\/O operation with a large transfer sizes (64-512KB), for a particular component over a particular time interval.",
+        "name": "Large Transfers Response Time",
+        "units": "ms\/op"
+      },
+      "1018": {
+        "description": "The average number of milliseconds that it took to service each I\/O operation with a very large transfer sizes (>512KB), for a particular component over a particular time interval.",
+        "name": "Very Large Transfers Response Time",
+        "units": "ms\/op"
+      },
+      "1020": {
+        "description": "The percentage of read operations that accessed SSD cache memory.  This metric applies only to XIV storage systems that use solid-state drives as an additional layer of caching.  The value for this metric is also included in the value for the Read Cache Hit Percentage (overall) metric.",
+        "name": "SSD Read Cache Hit Percentage",
+        "units": "%"
+      },
+      "1021": {
+        "description": "The percentage of data that was read from SSD cache memory.  This metric applies only to XIV storage systems that use solid-state drives as an additional layer of caching.  The value for this metric is also included in the value for the Read Data Cache Hit Percentage metric.",
+        "name": "SSD Read Data Cache Hit Percentage",
+        "units": "%"
+      },
+      "1022": {
+        "description": "The average number of milliseconds required to service each read hit operation from SSD cache memory.  This metric applies only to XIV storage systems that use solid-state drives as an additional layer of caching.  The value for this metric is also included in the value for the Read Cache Hit Response Time metric.",
+        "name": "SSD Read Cache Hit Response Time",
+        "units": "ms\/op"
+      },
+      "803": {
+        "description": "Average number of read operations per second (both sequential and non-sequential, if applicable), for a particular component over a particular time interval.",
+        "name": "Read I\/O Rate - overall",
+        "units": "ops\/s"
+      },
+      "806": {
+        "description": "Average number of write operations per second (both sequential and non-sequential, if applicable), for a particular component over a particular time interval.",
+        "name": "Write I\/O Rate - overall",
+        "units": "ops\/s"
+      },
+      "809": {
+        "description": "Average number of all read and write I\/O operations per second (both sequential and non-sequential), for a particular component over a particular time interval.",
+        "name": "Total I\/O Rate - overall",
+        "units": "ops\/s"
+      },
+      "812": {
+        "description": "The percentage of all read operations that find data in the cache. This value includes both sequential and random read operations, and read operations in the volume cache and volume copy cache where applicable. You can use this value to understand throughput or response times. Low cache-hit percentages can increase response times because a cache miss requires access to the back-end storage resources.",
+        "name": "Read Cache Hits - overall",
+        "units": "%"
+      },
+      "815": {
+        "description": "The percentage of all write operations that are handled in the cache. This value includes both sequential and random write operations, and write operations in the volume cache and volume copy cache where applicable.",
+        "name": "Write Cache Hits - overall",
+        "units": "%"
+      },
+      "818": {
+        "description": "The percentage of all read operations and write operations that are handled in the cache. This value includes both sequential and random read and write operations, and read and write operations in the volume cache and volume copy cache where applicable. You can use this value to understand throughput or response times. Low cache-hit percentages can increase response times because a cache miss requires access to the back-end storage resources.",
+        "name": "Total Cache Hits - overall",
+        "units": "%"
+      },
+      "819": {
+        "description": "Average number of mebibytes (2^20 bytes) per second transferred for read operations.",
+        "name": "Read Data Rate",
+        "units": "MiB\/s"
+      },
+      "820": {
+        "description": "Average number of mebibytes (2^20 bytes) per second transferred for write operations.",
+        "name": "Write Data Rate",
+        "units": "MiB\/s"
+      },
+      "821": {
+        "description": "Average number of mebibytes (2^20 bytes) per second transferred for read and write operations.",
+        "name": "Total Data Rate",
+        "units": "MiB\/s"
+      },
+      "822": {
+        "description": "Average number of milliseconds that it took to service each read operation, for a particular component over a particular time interval.",
+        "name": "Read Response Time",
+        "units": "ms\/op"
+      },
+      "823": {
+        "description": "Average number of milliseconds that it took to service each write operation, for a particular component over a particular time interval.",
+        "name": "Write Response Time",
+        "units": "ms\/op"
+      },
+      "824": {
+        "description": "Average number of milliseconds that it took to service each I\/O operation (reads and writes), for a particular component over a particular time interval.",
+        "name": "Overall Response Time",
+        "units": "ms\/op"
+      },
+      "825": {
+        "description": "Average number of kilobytes (2^10 bytes) transferred per read operation, for a particular component over a particular time interval.",
+        "name": "Read Transfer Size",
+        "units": "KiB\/op"
+      },
+      "826": {
+        "description": "Average number of kilobytes (2^10 bytes) transferred per write operation, for a particular component over a particular time interval.",
+        "name": "Write Transfer Size",
+        "units": "KiB\/op"
+      },
+      "827": {
+        "description": "Average number of kilobytes (2^10 bytes) transferred per I\/O (reads and writes), for a particular component over a particular time interval.",
+        "name": "Overall Transfer Size",
+        "units": "KiB\/op"
+      },
+      "998": {
+        "description": "The percentage of all read data (KB) that was read from the cache, for a particular component over a particular time interval.",
+        "name": "Read Data Cache Hit Percentage",
+        "units": "%"
+      },
+      "999": {
+        "description": "The percentage of all write data (KB) that was written to already dirty cache slots, for a particular component over a particular time interval.",
+        "name": "Write Data Cache Hit Percentage",
+        "units": "%"
+      }
+    }
+  },
+  {
+    "current": [
+      {
+        "x": 1530803626000,
+        "y": 0.0
+      },
+      {
+        "x": 1530803926000,
+        "y": 0.0
+      },
+      {
+        "x": 1530804382957,
+        "y": null
+      }
+    ],
+    "deviceId": 1111111,
+    "deviceName": "Storwize-XXXXX",
+    "endTime": 1530804382957,
+    "label": "Read I\/O Rate - overall",
+    "maxValue": 0.0,
+    "metricId": 803,
+    "minValue": 0.0,
+    "precision": 2,
+    "resourceID": 1222222,
+    "startTime": 1530803626000,
+    "units": "ops\/s"
+  }
+]
