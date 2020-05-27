@@ -1,8 +1,9 @@
-[![CircleCI](https://circleci.com/gh/topine/ibm-spectrum-exporter/tree/master.svg?style=shield)][circleci]
-[![Docker Pulls](https://img.shields.io/docker/pulls/topine/ibm-spectrum-exporter.svg?maxAge=604800)][hub]
-[![Go Report Card](https://goreportcard.com/badge/github.com/topine/ibm-spectrum-exporter)][goreportcard]
+
 
 # IBM Spectrum Exporter
+[![CircleCI](https://circleci.com/gh/topine/ibm-spectrum-exporter/tree/master.svg?style=shield)](https://circleci.com/gh/topine/ibm-spectrum-exporter)
+[![Docker Pulls](https://img.shields.io/docker/pulls/topine/ibm-spectrum-exporter.svg?maxAge=604800)](https://hub.docker.com/r/topine/ibm-spectrum-exporter/)
+[![Go Report Card](https://goreportcard.com/badge/github.com/topine/ibm-spectrum-exporter)](https://goreportcard.com/report/github.com/topine/ibm-spectrum-exporter)
 
 IBM Spectrum Exporter is a Prometheus exporter to collect & export data from IBM Spectrum.
 
