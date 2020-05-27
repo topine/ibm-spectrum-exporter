@@ -17,13 +17,8 @@ container: buildlinux
 	docker build -t topine/ibm-spectrum-exporter:$(TAG) .
 
 .PHONY: test
-PACKAGES = $(shell find ./pkg -type d -not -path './pkg' -not -path '*/testdata')
-
 test:
-	echo "mode: count" > coverage-all.out
-	$(foreach pkg,$(PACKAGES),\
-		go test -coverprofile=coverage.out -covermode=count $(pkg);\
-		tail -n +2 coverage.out >> coverage-all.out;)
+	go test -coverprofile=coverage.out -covermode=count ./...
 
 .PHONY: coverage-html
 coverage-html: test
