@@ -39,7 +39,13 @@ It's a simple YAML file following the below structure :
 
 ```
 metrics:
-  storage_systems:                                              # Section for Storage System config (Includes Volumes)
+  
+  storage_systems:                                               # Section for Storage System only.
+    - ibm_spectrum_metric_id: 1029
+      prometheus_name: storage_invalid_link_transmission_rate
+      prometheus_help: The average number of times per second that an invalid transmission word was detected by the port while the link did not experience any signal or synchronization loss.
+
+  storage_systems_and_volumes:                                  # Section for Storage System and Volumes
     - ibm_spectrum_metric_id: 803                               # Internal ID of the metric to be exposed
       prometheus_name: storage_avg_read_io_ops_per_second       # Prometheus metric name to be exported
       prometheus_help: Average number of read operations per second (both sequential and non-sequential, if applicable), for a particular component over a particular time interval.

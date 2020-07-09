@@ -1,5 +1,10 @@
 metrics:
   storage_systems:
+    - ibm_spectrum_metric_id: 1029
+      prometheus_name: storage_invalid_link_transmission_rate
+      prometheus_help: The average number of times per second that an invalid transmission word was detected by the port while the link did not experience any signal or synchronization loss.
+
+  storage_systems_and_volumes:
     - ibm_spectrum_metric_id: 803
       prometheus_name: storage_avg_read_io_ops_per_second
       prometheus_help: Average number of read operations per second (both sequential and non-sequential, if applicable), for a particular component over a particular time interval.

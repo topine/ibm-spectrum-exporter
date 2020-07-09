@@ -41,6 +41,10 @@ func newStorageCollector(config monitoring.MetricsConfig, logger *zap.Logger,
 		metrics[metric.MetricID] = prometheus.NewDesc(metric.PrometheusName, metric.PrometheusHelp, labelNames, nil)
 	}
 
+	for _, metric := range config.Metrics.StorageSystemsAndVolumes {
+		metrics[metric.MetricID] = prometheus.NewDesc(metric.PrometheusName, metric.PrometheusHelp, labelNames, nil)
+	}
+
 	return &storageCollector{
 		ibmSpectrumClient: spectrumClient,
 		logger:            logger.Sugar(),
