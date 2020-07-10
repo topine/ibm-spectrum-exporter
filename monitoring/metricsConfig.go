@@ -14,6 +14,11 @@ type MetricsConfig struct {
 			PrometheusName string `yaml:"prometheus_name"`
 			PrometheusHelp string `yaml:"prometheus_help"`
 		} `yaml:"storage_systems"`
+		StorageSystemsAndVolumes []struct {
+			MetricID       int    `yaml:"ibm_spectrum_metric_id"`
+			PrometheusName string `yaml:"prometheus_name"`
+			PrometheusHelp string `yaml:"prometheus_help"`
+		} `yaml:"storage_systems_and_volumes"`
 		Switches []struct {
 			MetricID       int    `yaml:"ibm_spectrum_metric_id"`
 			PrometheusName string `yaml:"prometheus_name"`

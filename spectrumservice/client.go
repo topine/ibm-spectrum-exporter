@@ -166,12 +166,19 @@ func (c *Client) CollectStorageMetrics(filter string) (*CollectedStorageMetrics,
 
 	paramsMap["startTime"] = strconv.FormatInt(timeInMillis, 10)
 
-	var buffer bytes.Buffer
+	var storageBuffer bytes.Buffer
 	for _, metric := range c.Config.Metrics.StorageSystems {
-		buffer.WriteString(strconv.Itoa(metric.MetricID))
-		buffer.WriteString(",")
+		storageBuffer.WriteString(strconv.Itoa(metric.MetricID))
+		storageBuffer.WriteString(",")
 	}
-	paramsMap["metrics"] = buffer.String()
+
+	var volumeBuffer bytes.Buffer
+	for _, metric := range c.Config.Metrics.StorageSystemsAndVolumes {
+		volumeBuffer.WriteString(strconv.Itoa(metric.MetricID))
+		volumeBuffer.WriteString(",")
+	}
+
+	paramsMap["metrics"] = storageBuffer.String() + volumeBuffer.String()
 	paramsMap["granularity"] = "sample"
 	// Spectrum sometimes is not returning the values if asking for all storage at once
 	for _, storage := range storages {
@@ -194,6 +201,7 @@ func (c *Client) CollectStorageMetrics(filter string) (*CollectedStorageMetrics,
 		}
 
 		delete(paramsMap, "ids")
+		paramsMap["metrics"] = volumeBuffer.String()
 		volumesMetrics, err := c.collectVolumeMetrics(cookies, storageID, paramsMap)
 		if err != nil {
 			c.Sugar.Errorf("Error collecting volumes metrics for storage %s. %v", storageName,
